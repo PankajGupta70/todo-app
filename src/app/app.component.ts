@@ -69,4 +69,8 @@ export class AppComponent {
   private persistTodos(): void {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(this.todos));
   }
+
+  checkToDos(): boolean {
+    return this.todos.some((todo) => todo.completed);
+  }
 }

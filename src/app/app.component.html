@@ -34,7 +34,7 @@
     </ng-template>
 
     <button
-      *ngIf="todos.some((todo) => todo.completed)"
+      *ngIf="checkToDos()"
       class="clear"
       type="button"
       (click)="clearCompleted()"
